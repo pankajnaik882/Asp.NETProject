@@ -14,6 +14,8 @@ namespace ManagerLayer.Interface
 
         public UserModel ForgetPassword(UserForgetPassword forgetPassword);
 
+        public bool ResetPassword(UserResetPassword userResetPassword, string Email);
+
         public string GenerateJWToken(string Email, int UserID);
 
         public string SendGmail(string to , int UserID);

@@ -12,6 +12,8 @@ namespace RepositoryLayer.Interface
         public UserModel Login(UserLogin login);
         public UserModel ForgetPassword(UserForgetPassword forgetPassword);
         public string GenerateJWToken(string Email, int UserID);
+        public bool ResetPassword(UserResetPassword userResetPassword, string Email);
+
     }
     
 }

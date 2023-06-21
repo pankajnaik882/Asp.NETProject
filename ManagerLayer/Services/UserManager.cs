@@ -45,6 +45,11 @@ namespace ManagerLayer.Services
             return userrepository.ForgetPassword(forgetPassword);
         }
 
+        public bool ResetPassword(UserResetPassword userResetPassword, string Email)
+        {
+            return userrepository.ResetPassword(userResetPassword, Email);
+        }
+
         public string SendGmail(string to, int UserID)
         {
             /*string to = "fagebi2588@anwarb.com";*/ //To address    

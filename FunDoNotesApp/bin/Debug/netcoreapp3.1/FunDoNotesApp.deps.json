@@ -35,6 +35,7 @@
           "MassTransit": "6.2.5",
           "MassTransit.AspNetCore": "6.2.5",
           "MassTransit.RabbitMQ": "6.2.5",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.32",
           "Microsoft.IdentityModel.Tokens": "6.31.0",
           "RepositoryLayer": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0",
@@ -439,6 +440,20 @@
           "lib/netstandard2.0/MassTransit.RabbitMqTransport.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.32": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "assemblyVersion": "3.1.32.0",
+            "fileVersion": "3.100.3222.56610"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Diagnostics/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.Abstractions": "2.2.0",
@@ -683,6 +698,37 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel.Protocols/5.5.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "6.31.0",
+          "Microsoft.IdentityModel.Tokens": "6.31.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll": {
+            "assemblyVersion": "5.5.0.0",
+            "fileVersion": "5.5.0.60624"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect/5.5.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols": "5.5.0",
+          "Newtonsoft.Json": "12.0.3",
+          "System.IdentityModel.Tokens.Jwt": "6.31.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
+            "assemblyVersion": "5.5.0.0",
+            "fileVersion": "5.5.0.60624"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {}
         }
       },
       "Microsoft.IdentityModel.Tokens/6.31.0": {
@@ -3382,6 +3428,13 @@
       "path": "masstransit.rabbitmq/6.2.5",
       "hashPath": "masstransit.rabbitmq.6.2.5.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.32": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tBnXyLLOm6VxJ51qXU2D7yzmcbXlLUh2YtTYFfNmGiznATcvO3d+e6Q0rRPFAKk92R6gP2JAu3FApM+6sfHjCQ==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/3.1.32",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.3.1.32.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Diagnostics/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -3626,6 +3679,20 @@
       "sha512": "sha512-YzW5O27nTXxNgNKm+Pud7hXjUlDa2JshtRG+WftQvQIsBUpFA/WjhxG2uO8YanfXbb/IT9r8Cu/VdYkvZ3+9/g==",
       "path": "microsoft.identitymodel.logging/6.31.0",
       "hashPath": "microsoft.identitymodel.logging.6.31.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Protocols/5.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m1gwAQwZjUxzRBC+4H40vYSo9Cms9yUbMdW492rQoXHU77G/ItiKxpk2+W9bWYcdsKUDKudye7im3T3MlVxEkg==",
+      "path": "microsoft.identitymodel.protocols/5.5.0",
+      "hashPath": "microsoft.identitymodel.protocols.5.5.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Protocols.OpenIdConnect/5.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-21F4QlbaD5CXNs2urNRCO6vljbbrhv3gmGT8P18SKGKZ9IYBCn29extoJriHiPfhABd5b8S7RcdKU50XhERkYg==",
+      "path": "microsoft.identitymodel.protocols.openidconnect/5.5.0",
+      "hashPath": "microsoft.identitymodel.protocols.openidconnect.5.5.0.nupkg.sha512"
     },
     "Microsoft.IdentityModel.Tokens/6.31.0": {
       "type": "package",

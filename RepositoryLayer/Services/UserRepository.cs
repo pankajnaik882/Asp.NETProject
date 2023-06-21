@@ -167,9 +167,42 @@ namespace RepositoryLayer.Services
             return userModel;
         }
 
-        //-----------------------------
+        //-----------------------------Reset Password Method--------------------------------
 
+        public bool ResetPassword(UserResetPassword userResetPassword, string Email)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(this.connectionString))
+                {
 
+                    SqlCommand cmd = new SqlCommand("dbo.usp_ResetPassword_Users", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue( "@Email", Email);
+                    cmd.Parameters.AddWithValue("@Password", EncryptPasswordBase64(userResetPassword.Password));
+
+                    con.Open();
+
+                    int ResetOrNot = cmd.ExecuteNonQuery();
+
+                    if (ResetOrNot >= 1)
+                    {
+                        return true;
+                    }
+
+                    con.Close();
+
+                }
+                return false;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            
+        }
 
     }
 }

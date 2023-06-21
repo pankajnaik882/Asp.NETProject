@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vIUwpzWqsCa1NTeLhaNiMKTe7JlRBNBeab1P1sz3s0hOOpVe+qCFP+bTznYbQ6UcZWPnvkKgK+qbbubJZd8Dww==",
+  "dgSpecHash": "rA/wp+tH92+X9MrSIJw2jsD99kzQDzXkRY5vacApCmjSYM9I1TeszoDjtVPM+/35K1JxjD+P9V0Ay7F5inF1sA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Pankyayyy\\Documents\\CFP BATCH\\FunDoNotesApp\\FunDoNotesApp.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\masstransit.aspnetcore\\6.2.5\\masstransit.aspnetcore.6.2.5.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\masstransit.extensions.dependencyinjection\\6.2.5\\masstransit.extensions.dependencyinjection.6.2.5.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\masstransit.rabbitmq\\6.2.5\\masstransit.rabbitmq.6.2.5.nupkg.sha512",
+    "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.32\\microsoft.aspnetcore.authentication.jwtbearer.3.1.32.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.aspnetcore.diagnostics\\2.2.0\\microsoft.aspnetcore.diagnostics.2.2.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.abstractions\\2.2.0\\microsoft.aspnetcore.diagnostics.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.healthchecks\\2.2.0\\microsoft.aspnetcore.diagnostics.healthchecks.2.2.0.nupkg.sha512",
@@ -46,6 +47,8 @@
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.31.0\\microsoft.identitymodel.abstractions.6.31.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.31.0\\microsoft.identitymodel.jsonwebtokens.6.31.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.identitymodel.logging\\6.31.0\\microsoft.identitymodel.logging.6.31.0.nupkg.sha512",
+    "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.identitymodel.protocols\\5.5.0\\microsoft.identitymodel.protocols.5.5.0.nupkg.sha512",
+    "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\5.5.0\\microsoft.identitymodel.protocols.openidconnect.5.5.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.31.0\\microsoft.identitymodel.tokens.6.31.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

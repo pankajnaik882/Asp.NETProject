@@ -70,3 +70,6 @@ C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\Mic
 C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\NewId.dll
 C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

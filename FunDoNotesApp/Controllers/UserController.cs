@@ -2,6 +2,7 @@
 using CommonLayer;
 using ManagerLayer.Interface;
 using MassTransit;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -20,11 +21,8 @@ namespace FunDoNotesApp.Controllers
     {
         private readonly IUserManager userManager;
 
-        //1-RabbitMQ
         private readonly IBusControl _bus;
 
-
-        //2-RabbitMQ
         public UserController(IUserManager userManager, IBusControl bus)
         {
             this.userManager = userManager;
@@ -89,7 +87,7 @@ namespace FunDoNotesApp.Controllers
                 if (UserForgetData != null)
                 {
 
-                    this.userManager.SendGmail("fagebi2588@anwarb.com", UserForgetData.UserID);
+                    this.userManager.SendGmail(UserForgetData.Email, UserForgetData.UserID);
 
                     Uri uri = new Uri("rabbitmq://localhost/Mail-Queue");
                     var endPoint = await _bus.GetSendEndpoint(uri);
@@ -107,6 +105,35 @@ namespace FunDoNotesApp.Controllers
             {
                 throw ex;
             }
+        }
+
+        [Authorize]
+        [HttpPost]
+        [Route("ResetPassword")]
+
+        public IActionResult ResetPassword(UserResetPassword resetPassword)
+        {
+            try
+            {
+                string Email = this.User.FindFirst("Email").Value;
+
+                if (resetPassword.Password == resetPassword.ConfirmPassword)
+                {
+                    bool userPassword = this.userManager.ResetPassword(resetPassword, Email);
+                    if (userPassword)
+                    {
+                        return this.Ok(new { Success = true, message = "Password Reset Successfull", result = resetPassword });
+                    }
+                }
+
+                return this.BadRequest(new { success = true, message = "Fetching Failed" });
+            }
+
+            catch (Exception ex)
+            {
+                return this.NotFound(new { success = false, message = ex.Message });
+            }
+
         }
     }
 }
