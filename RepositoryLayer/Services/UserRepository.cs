@@ -1,4 +1,5 @@
 ﻿using CommonLayer;
+using DocumentFormat.OpenXml.Spreadsheet;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using RepositoryLayer.Interface;
@@ -22,16 +23,16 @@ namespace RepositoryLayer.Services
         private readonly IConfiguration config;
         public readonly string connectionString;
 
-        public UserRepository (IConfiguration config)
+        public UserRepository(IConfiguration config)
         {
             this.connectionString = config.GetConnectionString("FundooDB");
             this.config = config;
-            
-            
+
+
         }
 
         //-----------------UserModel For Adding Users to Database-----------//
-        public UserModel AddUsers( UserModel users )
+        public UserModel AddUsers(UserModel users)
         {
 
             using (SqlConnection con = new SqlConnection(this.connectionString))
@@ -69,20 +70,20 @@ namespace RepositoryLayer.Services
 
         //-------------------------------------Login------------------------------------ 
 
-        public UserModel Login(UserLogin login )
-        { 
+        public UserModel Login(UserLogin login)
+        {
             UserModel userModel = new UserModel();
 
             using (SqlConnection con = new SqlConnection(this.connectionString))
             {
                 SqlCommand cmd = new SqlCommand("dbo.usp_Login_Users", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                
+
                 cmd.Parameters.AddWithValue("@Email", login.Email);
                 cmd.Parameters.AddWithValue("@Password", EncryptPasswordBase64(login.Password));
 
                 con.Open();
-               
+
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.HasRows)
@@ -93,11 +94,11 @@ namespace RepositoryLayer.Services
                         userModel.FirstName = reader.GetString(1);
                         userModel.LastName = reader.GetString(2);
                         userModel.Email = reader.GetString(3);
-                        
+
                     }
                 }
                 con.Close();
-            }  
+            }
             return userModel;
         }
 
@@ -115,12 +116,12 @@ namespace RepositoryLayer.Services
                        new Claim( "Email", Email),
                        new Claim("UserID", UserID.ToString()),
                 };
-                    
+
                 var token = new JwtSecurityToken(config["Jwt:Issuer"],
                 config["Jwt:Audience"],
                 Claims,
                 expires: DateTime.Now.AddHours(5),
-                signingCredentials : Credentials);
+                signingCredentials: Credentials);
 
                 return new JwtSecurityTokenHandler().WriteToken(token);
 
@@ -158,7 +159,7 @@ namespace RepositoryLayer.Services
                         userModel.FirstName = reader.GetString(1);
                         userModel.LastName = reader.GetString(2);
                         userModel.Email = reader.GetString(3);
-                        userModel.Password= DecryptPasswordBase64(reader.GetString(4));
+                        userModel.Password = DecryptPasswordBase64(reader.GetString(4));
 
                     }
                 }
@@ -179,7 +180,7 @@ namespace RepositoryLayer.Services
                     SqlCommand cmd = new SqlCommand("dbo.usp_ResetPassword_Users", con);
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue( "@Email", Email);
+                    cmd.Parameters.AddWithValue("@Email", Email);
                     cmd.Parameters.AddWithValue("@Password", EncryptPasswordBase64(userResetPassword.Password));
 
                     con.Open();
@@ -201,7 +202,55 @@ namespace RepositoryLayer.Services
             {
                 throw new Exception(ex.Message);
             }
-            
+
+        }
+
+        public IEnumerable<UserModel> GetallUsers(int UserID)
+        {
+               List<UserModel> Users = new List<UserModel>();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(this.connectionString))
+                {
+                    SqlCommand command = new SqlCommand("usp_GetAll_Users", con);
+
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    con.Open();
+                    
+                    SqlDataReader read = command.ExecuteReader();
+
+                    if (read.HasRows)
+                    {
+                        while(read.Read())
+                        {
+                            UserModel usermodel = new UserModel();
+
+                            usermodel.UserID = read.GetInt32(0);
+                            usermodel.FirstName = read.GetString(1);
+                            usermodel.LastName = read.GetString(2);
+                            usermodel.Email = read.GetString(3);
+                            usermodel.Password = read.GetString(4);
+
+                            Users.Add(usermodel);
+
+                        }
+
+                        
+                    }
+                    con.Close();
+
+                }
+                return Users;
+
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+                    
+                
         }
 
     }

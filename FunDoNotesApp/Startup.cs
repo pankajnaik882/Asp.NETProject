@@ -55,6 +55,10 @@ namespace FunDoNotesApp
 
             services.AddTransient<IUserManager, UserManager>();
 
+            services.AddTransient<INoteRepository, NoteRepository>();
+
+            services.AddTransient<INoteManager, NoteManager>();
+
 
             //services.AddSwaggerGen();
             ConfigureSwagger(services);
@@ -89,7 +93,7 @@ namespace FunDoNotesApp
         {
             Services.AddSwaggerGen(option =>
             {
-                option.SwaggerDoc("v1", new OpenApiInfo { Title = "Demo API", Version = "v1" });
+                option.SwaggerDoc("v1", new OpenApiInfo { Title = "FundooNotes API", Version = "v1" });
 
             var securitySchema = new OpenApiSecurityScheme {
                 In = ParameterLocation.Header,
@@ -130,10 +134,12 @@ namespace FunDoNotesApp
 
             app.UseAuthorization();
 
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
 
             app.UseSwagger();
 

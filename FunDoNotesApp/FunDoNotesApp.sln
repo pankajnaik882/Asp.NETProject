@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunDoNotesApp", "FunDoNotesApp.csproj", "{F94C0739-C109-4A44-B0C3-0DC8760594C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunDoNotesApp", "FunDoNotesApp.csproj", "{F94C0739-C109-4A44-B0C3-0DC8760594C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLayer", "..\RepositoryLayer\RepositoryLayer.csproj", "{7919B4CF-6807-4086-B2BB-C9B8AA4A7859}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLayer", "..\RepositoryLayer\RepositoryLayer.csproj", "{7919B4CF-6807-4086-B2BB-C9B8AA4A7859}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagerLayer", "..\ManagerLayer\ManagerLayer.csproj", "{365F50AD-ADA8-47A3-A637-20E1363AC4AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagerLayer", "..\ManagerLayer\ManagerLayer.csproj", "{365F50AD-ADA8-47A3-A637-20E1363AC4AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLayer", "..\CommonLayer\CommonLayer.csproj", "{CB68BF20-C2B2-4818-BA94-A855D30CEB12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLayer", "..\CommonLayer\CommonLayer.csproj", "{CB68BF20-C2B2-4818-BA94-A855D30CEB12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{70D7D23A-60B7-49DA-91C5-421CBDEE70E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

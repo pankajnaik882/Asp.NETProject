@@ -73,3 +73,8 @@ C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\Rab
 C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll
+C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll

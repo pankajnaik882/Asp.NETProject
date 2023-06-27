@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "P484/yO8/dd5bFOMzLRocP8dD61Zb0o9YN1OAhDbAuKjlcJ25OeeX/rGQ8LqoT5bDHVtIltsb0L9ymqoENELqw==",
+  "dgSpecHash": "EDLPuasWu327+pYEdDsLahP1fydWipmvyjVmaTxypMaIVdGupjPEAcWHhRPeAA0fbvl3jB1F1Xq3gdg7dvJMgw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Pankyayyy\\Documents\\CFP BATCH\\ManagerLayer\\ManagerLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\autofac\\4.9.4\\autofac.4.9.4.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\automatonymous\\4.2.1\\automatonymous.4.2.1.nupkg.sha512",
+    "C:\\Users\\Pankyayyy\\.nuget\\packages\\documentformat.openxml\\2.20.0\\documentformat.openxml.2.20.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\greenpipes\\3.0.1\\greenpipes.3.0.1.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\masstransit\\6.2.5\\masstransit.6.2.5.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -64,6 +65,7 @@
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\system.io.compression.zipfile\\4.3.0\\system.io.compression.zipfile.4.3.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\Pankyayyy\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\Pankyayyy\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",

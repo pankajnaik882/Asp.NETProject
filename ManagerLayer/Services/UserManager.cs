@@ -14,14 +14,12 @@ namespace ManagerLayer.Services
     {
         private readonly IUserRepository userrepository;
 
-        private readonly IBusControl _bus;
 
 
         public UserManager(IUserRepository userrepository , IBusControl bus)
         {
             this.userrepository = userrepository;
 
-            this._bus = bus;
 
         }
 
@@ -61,7 +59,7 @@ namespace ManagerLayer.Services
                 MailMessage message = new MailMessage(from, to);
 
                 string mailbody = "TOKEN GENERATED : " + token;
-                message.Subject = "Sending Email Using Asp.Net & C#";
+                message.Subject = "Your Secret Token Generated";
                 message.Body = mailbody;
                 message.BodyEncoding = Encoding.UTF8;
                 message.IsBodyHtml = true;
