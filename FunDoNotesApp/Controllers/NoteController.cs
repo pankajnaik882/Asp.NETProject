@@ -1,12 +1,19 @@
 ﻿using Autofac.Builder;
 using CommonLayer;
+using GreenPipes.Caching;
 using ManagerLayer.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using NLog;
 using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+using Tweetinvi.Core.Models;
 
 namespace FunDoNotesApp.Controllers
 {
@@ -15,13 +22,15 @@ namespace FunDoNotesApp.Controllers
     public class NoteController : ControllerBase
     {
         private readonly INoteManager noteManager;
-        private readonly ILogger<NoteController> _logger;
+        private readonly ILogger<NoteController> logger;
+        private readonly IDistributedCache distributedCache;
 
         public NoteController(INoteManager noteManager,
-            ILogger<NoteController> logger)
+            ILogger<NoteController> logger , IDistributedCache distributedCache)
         {
             this.noteManager = noteManager;
-            _logger = logger;
+            this.logger = logger;
+            this.distributedCache = distributedCache;
         }
 
         [Authorize]
@@ -50,7 +59,7 @@ namespace FunDoNotesApp.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("GetAllNote")]
         public IActionResult GetAllNotes()
         {
@@ -74,7 +83,7 @@ namespace FunDoNotesApp.Controllers
         }
 
         [Authorize]
-        [HttpPost]
+        [HttpGet]
         [Route("GetNoteByUserID")]
         public IActionResult GetNoteByUserID()
         {
@@ -101,7 +110,7 @@ namespace FunDoNotesApp.Controllers
         }
 
         [Authorize]
-        [HttpPost]
+        [HttpPut]
         [Route("UpdateNote")]
         public IActionResult UpdateNote(NoteModel noteModel )
         {
@@ -221,7 +230,7 @@ namespace FunDoNotesApp.Controllers
 
 
                 //throw new Exception("Error Occured");
-                _logger.LogInformation("The process Started");
+                logger.LogInformation("The process Started");
 
                 NoteModel ColorData = this.noteManager.ChangeColorNote(color, UserID ,NoteID);
                 
@@ -242,5 +251,74 @@ namespace FunDoNotesApp.Controllers
             }
         }
 
+        [Authorize]
+        [HttpPost]
+        [Route("UploadImage")]
+        public IActionResult UploadImage(string ImgPath,int NoteID)
+        {
+            try
+            {
+                int UserID = Convert.ToInt32(this.User.FindFirst("UserID").Value);
+
+                
+
+                string ImageData = this.noteManager.UploadImages(ImgPath, UserID, NoteID);
+
+
+                if (ImageData != null)
+                {
+                    return this.Ok(new { Success = true, message = NoteID + " : Image Uploaded Successfully", result = ImageData });
+                }
+
+
+                return this.BadRequest(new { success = true, message = "Process Failed" });
+            }
+
+            catch (Exception ex)
+            {
+                return this.NotFound(new { success = false, message = ex.Message });
+            }
+        }
+
+        [HttpGet]
+        [Route("GetAllNotesUsingRedis")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetAllNotesUsingRedis()
+        {
+            try
+            {
+                var CatcheKey = "NoteList";
+
+                List<NoteModel> NoteList;
+
+                byte[] RedisNoteList = await distributedCache.GetAsync(CatcheKey);
+                if (RedisNoteList != null) 
+                {
+                    logger.LogDebug("Getting List from redis cache");
+                    var SerializedNoteList = Encoding.UTF8.GetString(RedisNoteList);
+                    NoteList = JsonConvert.DeserializeObject<List<NoteModel>>(SerializedNoteList);
+                }
+                else
+                {
+                    logger.LogDebug("Setting list to cache for the first time");
+                    NoteList = (List<NoteModel>)this.noteManager.GetAllNotes();
+                    var SerializedNoteList = JsonConvert.SerializeObject(NoteList);
+                    var redisNoteList = Encoding.UTF8.GetBytes(SerializedNoteList);
+                    var option = new DistributedCacheEntryOptions().SetAbsoluteExpiration(DateTime.Now.AddMinutes(10)).SetSlidingExpiration(TimeSpan.FromMinutes(5));
+                    await distributedCache.SetAsync(CatcheKey,redisNoteList,option);
+                }
+                logger.LogInformation("Fetched all Notes using redis Successfully");
+                return Ok(NoteList);
+            }
+
+            catch (Exception ex)
+            {
+                logger.LogCritical(ex, "Exception Thrown...");
+                return BadRequest(new {success = false , message = ex.Message});
+            }
+            
+        }
+
     }
 }
+

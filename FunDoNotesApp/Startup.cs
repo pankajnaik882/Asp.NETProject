@@ -59,6 +59,13 @@ namespace FunDoNotesApp
 
             services.AddTransient<INoteManager, NoteManager>();
 
+            services.AddTransient<ILabelRepository, LabelRepository>();
+
+            services.AddTransient<ILabelManager, LabelManager>();
+
+            services.AddResponseCaching();
+
+            services.AddDistributedMemoryCache();
 
             //services.AddSwaggerGen();
             ConfigureSwagger(services);

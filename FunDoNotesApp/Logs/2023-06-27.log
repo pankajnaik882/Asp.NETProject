@@ -3,3 +3,50 @@
 2023-06-27 09:20:26.5713 INFO Hosting environment: Development
 2023-06-27 09:20:26.5894 INFO Content root path: C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp
 2023-06-27 09:20:54.6347 INFO The process Started
+2023-06-27 16:56:38.9392 DEBUG The Application Started
+2023-06-27 16:57:12.7370 INFO Application started. Press Ctrl+C to shut down.
+2023-06-27 16:57:12.7370 INFO Hosting environment: Development
+2023-06-27 16:57:12.7467 INFO Content root path: C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp
+2023-06-27 17:01:48.4682 DEBUG The Application Started
+2023-06-27 17:01:51.0350 INFO Application started. Press Ctrl+C to shut down.
+2023-06-27 17:01:51.0527 INFO Hosting environment: Development
+2023-06-27 17:01:51.0527 INFO Content root path: C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp
+2023-06-27 17:12:54.8986 DEBUG The Application Started
+2023-06-27 17:13:00.1839 INFO Application started. Press Ctrl+C to shut down.
+2023-06-27 17:13:00.1839 INFO Hosting environment: Development
+2023-06-27 17:13:00.1916 INFO Content root path: C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp
+2023-06-27 17:19:01.1747 DEBUG The Application Started
+2023-06-27 17:19:05.5036 INFO Application started. Press Ctrl+C to shut down.
+2023-06-27 17:19:05.5036 INFO Hosting environment: Development
+2023-06-27 17:19:05.5036 INFO Content root path: C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp
+2023-06-27 17:35:48.7210 DEBUG The Application Started
+2023-06-27 17:35:51.7373 INFO Application started. Press Ctrl+C to shut down.
+2023-06-27 17:35:51.7424 INFO Hosting environment: Development
+2023-06-27 17:35:51.7424 INFO Content root path: C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp
+2023-06-27 17:40:38.5253 DEBUG The Application Started
+2023-06-27 17:40:42.9056 INFO Application started. Press Ctrl+C to shut down.
+2023-06-27 17:40:42.9107 INFO Hosting environment: Development
+2023-06-27 17:40:42.9107 INFO Content root path: C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp
+2023-06-27 20:13:54.2368 DEBUG The Application Started
+2023-06-27 20:13:57.6246 INFO Application started. Press Ctrl+C to shut down.
+2023-06-27 20:13:57.6459 INFO Hosting environment: Development
+2023-06-27 20:13:57.6459 INFO Content root path: C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp
+2023-06-27 21:20:27.5533 DEBUG The Application Started
+2023-06-27 21:20:39.3756 INFO Application started. Press Ctrl+C to shut down.
+2023-06-27 21:20:39.3799 INFO Hosting environment: Development
+2023-06-27 21:20:39.3971 INFO Content root path: C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp
+2023-06-27 21:28:45.7642 ERROR An unhandled exception has occurred while executing the request.
+2023-06-27 21:29:16.3496 ERROR An unhandled exception has occurred while executing the request.
+2023-06-27 21:32:12.4225 DEBUG The Application Started
+2023-06-27 21:32:17.4500 INFO Application started. Press Ctrl+C to shut down.
+2023-06-27 21:32:17.4500 INFO Hosting environment: Development
+2023-06-27 21:32:17.4613 INFO Content root path: C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp
+2023-06-27 21:32:25.0597 ERROR An unhandled exception has occurred while executing the request.
+2023-06-27 21:32:38.9177 ERROR An unhandled exception has occurred while executing the request.
+2023-06-27 21:37:06.8716 DEBUG The Application Started
+2023-06-27 21:37:14.5627 INFO Application started. Press Ctrl+C to shut down.
+2023-06-27 21:37:14.5684 INFO Hosting environment: Development
+2023-06-27 21:37:14.5684 INFO Content root path: C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp
+2023-06-27 21:40:09.6058 INFO Fetched all Notes using redis Successfully
+2023-06-27 21:40:09.6234 INFO Fetched all Notes using redis Successfully
+2023-06-27 21:40:55.0612 INFO Fetched all Notes using redis Successfully

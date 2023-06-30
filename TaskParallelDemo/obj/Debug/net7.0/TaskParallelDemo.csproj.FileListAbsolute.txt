@@ -1,0 +1,15 @@
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\bin\Debug\net7.0\TaskParallelDemo.exe
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\bin\Debug\net7.0\TaskParallelDemo.deps.json
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\bin\Debug\net7.0\TaskParallelDemo.runtimeconfig.json
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\bin\Debug\net7.0\TaskParallelDemo.dll
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\bin\Debug\net7.0\TaskParallelDemo.pdb
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\obj\Debug\net7.0\TaskParallelDemo.csproj.AssemblyReference.cache
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\obj\Debug\net7.0\TaskParallelDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\obj\Debug\net7.0\TaskParallelDemo.AssemblyInfoInputs.cache
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\obj\Debug\net7.0\TaskParallelDemo.AssemblyInfo.cs
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\obj\Debug\net7.0\TaskParallelDemo.csproj.CoreCompileInputs.cache
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\obj\Debug\net7.0\TaskParallelDemo.dll
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\obj\Debug\net7.0\refint\TaskParallelDemo.dll
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\obj\Debug\net7.0\TaskParallelDemo.pdb
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\obj\Debug\net7.0\TaskParallelDemo.genruntimeconfig.cache
+C:\Users\Pankyayyy\Documents\CFP BATCH\TaskParallelDemo\obj\Debug\net7.0\ref\TaskParallelDemo.dll

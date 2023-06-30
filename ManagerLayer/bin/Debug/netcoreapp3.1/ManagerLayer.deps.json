@@ -34,6 +34,19 @@
           }
         }
       },
+      "CloudinaryDotNet/1.21.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Html.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/CloudinaryDotNet.dll": {
+            "assemblyVersion": "1.21.0.0",
+            "fileVersion": "1.21.0.0"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/2.20.0": {
         "dependencies": {
           "System.IO.Packaging": "4.7.0"
@@ -62,7 +75,7 @@
           "Automatonymous": "4.2.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.2.0",
           "NewId": "3.0.2",
-          "Newtonsoft.Json": "12.0.3",
+          "Newtonsoft.Json": "13.0.1",
           "Newtonsoft.Json.Bson": "1.0.1",
           "System.Diagnostics.DiagnosticSource": "4.7.0",
           "System.Reflection.Emit": "4.7.0",
@@ -77,6 +90,40 @@
           "lib/netstandard2.0/MassTransit.dll": {
             "assemblyVersion": "6.2.5.0",
             "fileVersion": "6.2.5.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
+        "dependencies": {
+          "System.Text.Encodings.Web": "4.7.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "4.7.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
           }
         }
       },
@@ -244,18 +291,18 @@
           }
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/13.0.1": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.3.23909"
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
           }
         }
       },
       "Newtonsoft.Json.Bson/1.0.1": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {
@@ -961,7 +1008,7 @@
       "TweetinviAPI/5.0.4": {
         "dependencies": {
           "Autofac": "4.9.4",
-          "Newtonsoft.Json": "12.0.3",
+          "Newtonsoft.Json": "13.0.1",
           "System.Collections": "4.3.0",
           "System.Net.Http": "4.3.4",
           "System.Reflection.TypeExtensions": "4.5.1"
@@ -1008,6 +1055,7 @@
       },
       "RepositoryLayer/1.0.0": {
         "dependencies": {
+          "CloudinaryDotNet": "1.21.0",
           "CommonLayer": "1.0.0",
           "DocumentFormat.OpenXml": "2.20.0",
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
@@ -1042,6 +1090,13 @@
       "path": "automatonymous/4.2.1",
       "hashPath": "automatonymous.4.2.1.nupkg.sha512"
     },
+    "CloudinaryDotNet/1.21.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ln7vw2WwpwmdB3bqKHV5fOTLQBV074KPI/WoMxXrIlSAZTBKjNHm6AcEJa2nz9yVIa17+r4/9yI+h4oJORZ1QA==",
+      "path": "cloudinarydotnet/1.21.0",
+      "hashPath": "cloudinarydotnet.1.21.0.nupkg.sha512"
+    },
     "DocumentFormat.OpenXml/2.20.0": {
       "type": "package",
       "serviceable": true,
@@ -1062,6 +1117,27 @@
       "sha512": "sha512-q+W6JnsinwZMBvbGHv+7CFjXVasnROW+uF3R8ZqXLmKSWpxdPaFNDo78GPDlEr9NF+0rI6kBAMMMD6Hz1HQ8ew==",
       "path": "masstransit/6.2.5",
       "hashPath": "masstransit.6.2.5.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y4rs5aMEXY8G7wJo5S3EEt6ltqyOTr/qOeZzfn+hw/fuQj5GppGckMY5psGLETo1U9hcT5MmAhaT5xtusM1b5g==",
+      "path": "microsoft.aspnetcore.html.abstractions/2.2.0",
+      "hashPath": "microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",
@@ -1168,12 +1244,12 @@
       "path": "newid/3.0.2",
       "hashPath": "newid.3.0.2.nupkg.sha512"
     },
-    "Newtonsoft.Json/12.0.3": {
+    "Newtonsoft.Json/13.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
-      "path": "newtonsoft.json/12.0.3",
-      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
     "Newtonsoft.Json.Bson/1.0.1": {
       "type": "package",

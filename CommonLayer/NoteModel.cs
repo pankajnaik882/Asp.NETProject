@@ -26,6 +26,7 @@ namespace CommonLayer
  
         public DateTime ModifiedAt { get; set; }
 
+        public string ImageUrl { get; set; }
 
     }
 }

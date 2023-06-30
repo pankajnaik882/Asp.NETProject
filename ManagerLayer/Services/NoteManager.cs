@@ -55,5 +55,11 @@ namespace ManagerLayer.Services
         {
             return noterepository.ChangeColorNote(Color, UserID, NoteID);
         }
+
+        public string UploadImages(string filePath, int NoteID, int UserID)
+        {
+            return noterepository.UploadImages(filePath, NoteID, UserID);
+        }
+
     }
 }

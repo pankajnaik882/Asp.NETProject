@@ -22,5 +22,8 @@ namespace ManagerLayer.Interface
         public bool PinNote(NoteArchiveModel noteArchiveModel, int UserID);
 
         public NoteModel ChangeColorNote(string Color, int UserID, int NoteID);
+
+        public string UploadImages(string filePath, int NoteID, int UserID);
+
     }
 }

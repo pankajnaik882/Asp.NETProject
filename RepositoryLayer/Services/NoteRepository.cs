@@ -7,6 +7,9 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Text;
 using System.Threading.Tasks;
+using Tweetinvi.Client;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 
 namespace RepositoryLayer.Services
 {
@@ -330,5 +333,58 @@ namespace RepositoryLayer.Services
                 throw new Exception(ex.Message);
             }
         }
+
+        public string UploadImages(string filePath, int NoteID , int UserID )
+        {
+            try
+            {
+                NoteModel note = new NoteModel();
+
+                    Account account = new Account("dwqxpcokc", "392936136134788", "IsvbO3CYFqPj_QVypjmpvYHFOtU");
+                    Cloudinary cloudinary = new Cloudinary(account);
+                    ImageUploadParams imageUploadParams = new ImageUploadParams()
+                    {
+                        File = new FileDescription(filePath),
+                        PublicId = note.Title
+                    };
+
+                    ImageUploadResult imageUploadResult = cloudinary.Upload(imageUploadParams);
+
+                     note.ModifiedAt = DateTime.Now;
+                    note.ImageUrl = imageUploadResult.Url.ToString();
+
+                    using (SqlConnection con = new SqlConnection(this.connectionString))
+                    {
+                        SqlCommand cmd = new SqlCommand("dbo.usp_UploadImage_Notes", con);
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@UserID", Convert.ToInt32(UserID));
+                        cmd.Parameters.AddWithValue("@NoteID",Convert.ToInt32(NoteID));
+                        //cmd.Parameters.AddWithValue("@ModifiedAt", note.ModifiedAt);
+                        cmd.Parameters.AddWithValue("@ImageUrl", Convert.ToString(note.ImageUrl));
+
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+
+                    return "Upload Successfull";
+
+            }
+
+            catch (Exception x)
+            {
+                throw new Exception(x.Message);
+            }
+        }
+
+        //-----------------------LabelMethods---------------------------
+
+        
+
+       
+
+
+
     }
 }

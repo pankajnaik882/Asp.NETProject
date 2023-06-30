@@ -78,3 +78,4 @@ C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\Sys
 C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\NLog.dll
 C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
 C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+C:\Users\Pankyayyy\Documents\CFP BATCH\FunDoNotesApp\bin\Debug\netcoreapp3.1\CloudinaryDotNet.dll
